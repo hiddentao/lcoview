@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="logo.png" alt="lcoview" width="300" height="300" />
+</div>
+
 # lcoview
 
 [![CI](https://github.com/hiddentao/lcoview/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/hiddentao/lcoview/actions/workflows/ci.yml)
@@ -6,7 +10,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 
-A fast, lightweight LCOV coverage report viewer that generates beautiful, interactive HTML reports with file filtering.
+A fast, lightweight [LCOV](https://github.com/linux-test-project/lcov) coverage report viewer that generates beautiful, interactive HTML reports with file filtering.
 
 ## Features
 
@@ -171,3 +175,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 MIT License - see [LICENSE.md](LICENSE.md) for details.
 
+## Related links
+
+* https://github.com/linux-test-project/lcov
