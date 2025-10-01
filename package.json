@@ -1,6 +1,6 @@
 {
   "name": "lcoview",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "LCOV coverage report viewer that generates interactive HTML reports with file filtering",
   "keywords": [
     "lcov",
