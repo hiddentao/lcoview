@@ -23,9 +23,9 @@ jobs:
 
     - name: Install system dependencies
       run: |
-        sudo apt-get update
-        sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends lcov
-        sudo rm -rf /var/lib/apt/lists/*
+        sudo debconf-set man-db/auto-update false
+        sudo rm /var/lib/man-db/auto-update
+        sudo apt-get update && sudo apt-get install -y lcov
 
     - name: Install dependencies
       run: bun install
