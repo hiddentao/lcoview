@@ -40,6 +40,7 @@
     "dist",
     "bin",
     "templates",
+    "logo.png",
     "README.md",
     "LICENSE.md"
   ],
