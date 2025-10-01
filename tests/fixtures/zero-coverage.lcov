@@ -1,0 +1,11 @@
+SF:src/unused.ts
+FN:1,unusedFunction
+FNDA:0,unusedFunction
+FNF:1
+FNH:0
+DA:1,0
+DA:2,0
+DA:3,0
+LF:3
+LH:0
+end_of_record

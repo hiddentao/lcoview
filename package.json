@@ -1,0 +1,87 @@
+{
+  "name": "lcoview",
+  "version": "1.0.0",
+  "description": "LCOV coverage report viewer that generates interactive HTML reports with file filtering",
+  "keywords": [
+    "lcov",
+    "coverage",
+    "report",
+    "html",
+    "viewer",
+    "testing",
+    "code-coverage",
+    "cli"
+  ],
+  "author": "Ramesh Nair <ram@hiddentao.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hiddentao/lcoview.git"
+  },
+  "homepage": "https://github.com/hiddentao/lcoview",
+  "bugs": {
+    "url": "https://github.com/hiddentao/lcoview/issues"
+  },
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "bin": {
+    "lcoview": "./bin/lcoview.js"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "templates",
+    "README.md",
+    "LICENSE.md"
+  ],
+  "scripts": {
+    "build": "bun run scripts/build.ts",
+    "build:watch": "bun run scripts/build.ts --watch",
+    "test": "bun test",
+    "test:coverage": "bun test --coverage --coverage-reporter=lcov",
+    "test:watch": "bun test --watch",
+    "lint": "biome check --apply ./src",
+    "format": "biome format --write ./src ./tests",
+    "check": "biome check ./src ./tests",
+    "prepublishOnly": "bun run build && bun run test:coverage",
+    "postbuild": "chmod +x bin/lcoview.js",
+    "commit": "cz"
+  },
+  "dependencies": {
+    "commander": "^12.0.0",
+    "chalk": "^5.3.0",
+    "open": "^10.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.5.0",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@types/bun": "latest",
+    "@types/node": "^22.0.0",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.7",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "engineStrict": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
