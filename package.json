@@ -42,7 +42,8 @@
     "templates",
     "logo.png",
     "README.md",
-    "LICENSE.md"
+    "LICENSE.md",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "build": "bun run scripts/build.ts",
@@ -55,7 +56,12 @@
     "check": "biome check ./src ./tests",
     "prepublishOnly": "bun run build && bun run test:coverage",
     "postbuild": "chmod +x bin/lcoview.js",
-    "commit": "cz"
+    "commit": "cz",
+    "release": "commit-and-tag-version",
+    "release:minor": "commit-and-tag-version --release-as minor",
+    "release:major": "commit-and-tag-version --release-as major",
+    "release:patch": "commit-and-tag-version --release-as patch",
+    "release:publish": "bun run release && git push --follow-tags origin main && npm publish"
   },
   "dependencies": {
     "commander": "^12.0.0",
@@ -68,6 +74,7 @@
     "@commitlint/config-conventional": "^19.8.1",
     "@types/bun": "latest",
     "@types/node": "^22.0.0",
+    "commit-and-tag-version": "^12.6.0",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^9.1.7",
