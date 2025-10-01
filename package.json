@@ -73,7 +73,8 @@
     "typescript": "^5.3.0"
   },
   "engines": {
-    "node": ">=22.0.0"
+    "node": ">=22.0.0",
+    "bun": ">=1.2.0"
   },
   "engineStrict": true,
   "publishConfig": {

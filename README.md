@@ -1,5 +1,8 @@
 # lcoview
 
+[![CI](https://github.com/hiddentao/lcoview/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/hiddentao/lcoview/actions/workflows/ci.yml)
+[![Coverage Status](https://coveralls.io/repos/github/hiddentao/lcoview/badge.svg?branch=main)](https://coveralls.io/github/hiddentao/lcoview?branch=main)
+[![npm version](https://badge.fury.io/js/lcoview.svg)](https://badge.fury.io/js/lcoview)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 
